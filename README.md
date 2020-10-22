@@ -3,10 +3,10 @@
 		{
 			module: "simpletext",
 			position: "top_center",
-			header: "",        // Header nam or title
+			header: "",        	// Header nam or title
 			disabled: true,
 			config: {
-		    text: "", 		  // text with or without HTML tag
-		    cssClass: "",	  // css style for text or HTML tag
+		    		text: "", 	// text with or without HTML tag
+		    		cssClass: "",	// css style for text or HTML tag
 			}
 		},
