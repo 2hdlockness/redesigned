@@ -3,7 +3,7 @@
 		{
 			module: "simpletext",
 			position: "top_center",
-			header: "",        	// Header nam or title
+			header: "",        	// Header name or title
 			disabled: true,
 			config: {
 		    		text: "", 	// text with or without HTML tag
