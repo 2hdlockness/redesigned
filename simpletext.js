@@ -9,7 +9,7 @@
 Module.register("simpletext",{
 
 	defaults: {
-		text: "", 		// text with or without HTML tag
+		text: "", 	// text with or without HTML tag
 		cssClass: "",	// css style for text or HTML tag
 	},
 
