@@ -1,5 +1,7 @@
 # simpletext for MagicMirror &sup2;
 
+<br>This module is no longer maintained, will not have any improvements or bug fixes.
+
 		{
 			module: "simpletext",
 			position: "top_center",
