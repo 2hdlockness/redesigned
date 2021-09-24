@@ -12,3 +12,7 @@
 		    		cssClass: "",	// css style for text or HTML tag
 			}
 		},
+
+Redesigned by Răzvan Cristea
+https://github.com/hangorazvan
+Creative Commons BY-NC-SA 4.0, Romania.
