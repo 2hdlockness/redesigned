@@ -13,6 +13,6 @@
 			}
 		},
 
-Redesigned by Răzvan Cristea
+Designed by Răzvan Cristea
 https://github.com/hangorazvan
 Creative Commons BY-NC-SA 4.0, Romania.
