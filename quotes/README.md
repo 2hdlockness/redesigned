@@ -1,4 +1,4 @@
-# Module: quotes
+# Random quotes for MagicMirror&sup2;
 
 The `quotes` module returns a random quote based on the category set. See the section on `Updating Quotes` below.
 
