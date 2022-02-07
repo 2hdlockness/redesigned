@@ -6,7 +6,7 @@ To use this module, add it to the modules array in the config/config.js file:
 
 ```
 {
-  module: 'MMM-Multimonth',
+  module: 'monthly',
 	position: 'top_left', 				// can be any of the postions
 	config: { 					// Optional - will default to 3 months, with one previous and one next, vertical orientation. 
 		startMonth: -1, 			// Define when you start from current month (negative is before current, zero is current, positive is in future) 
@@ -20,3 +20,5 @@ To use this module, add it to the modules array in the config/config.js file:
 ```
 
 Localization is provided by moment.js and controlled by the master language of MagicMirror. Please file any errors with localizations as bugs with the moment.js team - https://github.com/moment/moment/
+
+Redesigned by Răzvan Cristea https://github.com/hangorazvan Creative Commons BY-NC-SA 4.0, Romania.
