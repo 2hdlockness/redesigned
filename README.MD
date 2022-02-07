@@ -1,4 +1,4 @@
-### MagicMirror&sup2; modules
+#### MagicMirror&sup2; modules
 
 Some modified default original modules:
 <br>iCalendar based on PHP original first MM version (jquery)
