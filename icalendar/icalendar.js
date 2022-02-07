@@ -8,7 +8,18 @@
  */
 Module.register("icalendar", {
 
-	defaults: {},
+	defaults: {
+		maximumEntries: 11,
+		calendarClass: "icalendar",
+		defaultSymbol: "calendar",
+		displaySymbol: true,
+		updateInterval: 1000,
+		updateDataInterval: 5 * 60 * 1000,
+		fade: 0,
+		calendar: {
+			urls: []
+		}
+	},
 
 	getScripts: function() {
 		return ["jquery.js", "rrule.min.js"];
