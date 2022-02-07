@@ -1,4 +1,4 @@
-# JsonTable
+# JsonTable for MagicMirror&sup2;
 A module which creates a table filled with a list gathered from a json request.
 
 All the variables of the objects in the array are represented by a table column.
