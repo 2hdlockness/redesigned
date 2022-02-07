@@ -1,4 +1,4 @@
-# simpletext for MagicMirror &sup2;
+# simpletext for MagicMirror&sup2;
 
 This module is no longer maintained, will not have any improvements or bug fixes.
 
