@@ -1,1 +1,1 @@
-## RssFeed based on PHP alternative first MM version (jquery)
+# RssFeed based on PHP alternative first MM version (jquery)
