@@ -8,7 +8,19 @@
  */
 Module.register("rssfeed", {
 
-	defaults: {},
+	defaults: {
+		lengthDescription: 600,
+		fetchNewsTime: 5 * 60 * 1000,
+		feedURLs: {
+			"ProTV"		: "https://rss.stirileprotv.ro",
+			"Mediafax"	: "https://www.mediafax.ro/rss",
+			"NewsIn"	: "https://newsin.ro/feed",
+			"News.ro"	: "https://www.news.ro/rss",
+			"MainNews"	: "https://mainnews.ro/feed",
+			"Ziare.com"	: "https://www.ziare.com/rss/12h.xml"
+		},
+		feedMaxAge: {days: 0, hours: 12}
+	},
 
 	getScripts: function() {
 		return ["jquery.js"];
