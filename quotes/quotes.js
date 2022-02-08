@@ -9,7 +9,10 @@
 Module.register("quotes",{
 
 	defaults: {
-	    fadeSpeed: config.animation,
+		updateInterval: 22500,
+		category: "random",
+		className: "medium",
+		fadeSpeed: 1000,
 		quotes: {
 			selected: [
 				"\"Fii tu insuti, toți ceilalți sunt deja luați.\"~ Oscar Wilde ~",
