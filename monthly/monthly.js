@@ -8,7 +8,16 @@
 
 Module.register("monthly", {
 	// Default module config.
-	defaults: {},
+	defaults: {
+		startMonth: 0,
+		monthCount: 2,
+		monthsVertical: true,
+		repeatWeekdaysVertical: false,
+		weekNumbers: true,
+		highlightWeekend: true,
+		showPastFuture: true,
+		fade: false
+	},
 
 	// CSS Add
 	getStyles: function () {
