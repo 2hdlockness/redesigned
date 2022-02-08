@@ -1,6 +1,6 @@
 # MagicMirror&sup2; modules
 
-Some modified default original modules:
+Some original modified modules:
 <br>iCalendar based on PHP original first MM version (jquery)
 <br>RssFeed based on PHP alternative first MM version (jquery)
 
