@@ -8,7 +8,10 @@
  */
 Module.register("simpletext",{
 
-	defaults: {},
+	defaults: {
+		text: "",	// html or text
+		cssClass: ""	// small, normal or large
+	},
 
 	getScripts: function () {
 	    return false;
