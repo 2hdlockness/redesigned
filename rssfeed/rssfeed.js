@@ -17,7 +17,7 @@ Module.register("rssfeed", {
 			"NewsIn"	: "https://newsin.ro/feed",
 			"News.ro"	: "https://www.news.ro/rss",
 			"MainNews"	: "https://mainnews.ro/feed",
-			"Ziare.com"	: "https://www.ziare.com/rss/12h.xml"
+			"Ziare.com"	: "https://www.ziare.com/rss/12h.xml",
 		},
 		feedMaxAge: {days: 0, hours: 12}
 	},
