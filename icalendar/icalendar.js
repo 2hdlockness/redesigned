@@ -9,15 +9,25 @@
 Module.register("icalendar", {
 
 	defaults: {
-		maximumEntries: 11,
+		maximumEntries: 20,
 		calendarClass: "icalendar",
 		defaultSymbol: "calendar",
 		displaySymbol: true,
 		updateInterval: 1000,
 		updateDataInterval: 5 * 60 * 1000,
 		fade: 0,
+
 		calendar: {
-			urls: []
+			urls: [
+				{
+					symbol: "calendar-check-o",
+					url: "https://calendar.google.com/calendar/ical/ro.romanian%23holiday%40group.v.calendar.google.com/public/basic.ics",
+				},
+				{
+					symbol: "moon",
+					url: "https://calendar.google.com/calendar/ical/ht3jlfaac5lfd6263ulfh4tql8%40group.calendar.google.com/public/basic.ics",
+				}
+			]
 		}
 	},
 
