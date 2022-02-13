@@ -32,7 +32,7 @@ Module.register("icalendar", {
 	},
 
 	getScripts: function() {
-		return ["jquery.js", "rrule.min.js"];
+		return ["jquery.min.js", "rrule.min.js"];
 	},
 
 	getStyles: function() {
