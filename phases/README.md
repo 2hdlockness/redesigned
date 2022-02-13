@@ -1,13 +1,5 @@
-# Magic Mirror Module: mmm-moon-phase-display
-This [MagicMirror2](https://github.com/MichMich/MagicMirror) module allows you to fetch an image of the moon in its current phase
-
-## Installation
-
-In your terminal, go to your MagicMirror's Module folder:
-````
-cd ~/MagicMirror/modules
-git clone https://github.com/Sven1603/mmm-moon-phase-display.git
-````
+# Magic Mirror Module: moon-phase
+This [MagicMirror2] module allows you to fetch an image of the moon in its current phase
 
 Configure the module in your `config.js` file.
 
@@ -33,6 +25,3 @@ modules: [
 | --- | --- | --- |
 | `height` | 40 | The height of the image. |
 | `width` | 40 | The width of the image. |
-
-## Screenshot
-![Screenshot](img/screenshot.jpg)
