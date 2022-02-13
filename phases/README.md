@@ -12,7 +12,7 @@ Now add the module to the modules array in the `config/config.js` file:
 ````javascript
 modules: [
         {
-                module: 'mmm-moon-phase-display',
+                module: 'phase',
                 position: 'top_center',        // this can be any of the regions
                 config: {
                 }
