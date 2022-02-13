@@ -12,3 +12,4 @@ Some 3rd party modified modules:
 <br>traffic
 <br>snow
 <br>simpletext
+<br>moon phases
