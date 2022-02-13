@@ -59,28 +59,28 @@ Module.register("phases",{
 
         switch(true){
             case  phase < 1.5:
-                moonImage = 'modules/phases/img/0-new-moon.png'
+                moonImage = 'modules/phases/img/new-moon.png'
                 break
             case phase < 6:
-                moonImage = 'modules/phases/img/1-waxing-crescent.png'
+                moonImage = 'modules/phases/img/waxing-crescent.png'
                 break
             case phase < 9:
-                moonImage = 'modules/phases/img/2-first-quarter.png'
+                moonImage = 'modules/phases/img/first-quarter.png'
                 break
             case phase < 14:
-                moonImage = 'modules/phases/img/3-waxing-gibbous.png'
+                moonImage = 'modules/phases/img/waxing-gibbous.png'
                 break
             case phase < 16:
-                moonImage = 'modules/phases/img/4-full-moon.png'
+                moonImage = 'modules/phases/img/full-moon.png'
                 break
             case phase < 21:
-                moonImage = 'modules/phases/img/5-waning-gibbous.png'
+                moonImage = 'modules/phases/img/waning-gibbous.png'
                 break
             case phase < 24:
-                moonImage = 'modules/phases/img/6-last-quarter.png'
+                moonImage = 'modules/phases/img/last-quarter.png'
                 break
             case phase < 28.5:
-                moonImage = 'modules/phases/img/7-waning-crescent.png'
+                moonImage = 'modules/phases/img/waning-crescent.png'
                 break
         }
 
