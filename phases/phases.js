@@ -1,101 +1,320 @@
 // MagicMirror Module
-// © Sven Stroomberg
+// Moon phases
+// Răzvan Cristea
 
 Module.register("phases",{
     // Default module config.
     defaults: {
-        width: "40",
-        height: "40",
+        width: "70",
+        height: "70"
     },
     
     start: function() {
-		Log.info('Starting module: ' + this.name);
-		// Refresh the Dom every 12 hours
-        var self = this;
-        setInterval(function(){
-            self.updateDom()
-        }, 43200000)
+	     Log.info('Starting module: ' + this.name);
+          var self = this;
+          setInterval(function(){
+            self.updateDom();
+        }, 60 * 60 * 1000);
 
 	},
 
+     getTranslations: function () {
+          return {
+             en: "en.json",
+             ro: "ro.json"
+          };
+     },
+
     // Override dom generator.
     getDom: function() {
-        /*
-          calculates the moon phase (0-7), accurate to 1 segment.
-          0 = > new moon.
-          4 => full moon.
-          calculations based on https://www.subsystems.us/uploads/9/8/9/4/98948044/moonphase.pdf
-          */
-        var date = new Date()
-        var day = date.getDate()
-        var month = date.getMonth() + 1
-        var year = date.getFullYear()
+        var date = new Date();
+        var day = date.getDate();
+        var month = date.getMonth() + 1;
+        var year = date.getFullYear();
 
         if (month < 3) {
             year--
-            month += 12
+            month += 12;
         }
 
         // Calculate Julian Day (jd) 
-        var a = parseInt(year / 100)
-        var b = parseInt(a / 4)
-        var c = 2 - a + b
-        var e = parseInt(365.25 * (year + 4716))
-        var f = parseInt(30.6001 * (month + 1))
-        var jd = c + day + e + f - 1524.5
+        var a = parseInt(year / 100);
+        var b = parseInt(a / 4);
+        var c = 2 - a + b;
+        var e = parseInt(365.25 * (year + 4716));
+        var f = parseInt(30.6001 * (month + 1));
+        var jd = c + day + e + f - 1524.5;
 
-        var daysSinceNew = jd - 2451549.5
-        var newMoons = daysSinceNew / 29.53
-        var newMoonsFract = newMoons - parseInt(newMoons)   // Get the fractional part of newMoons
-        var phase = newMoonsFract * 29.53
-        
+        var daysSinceNew = jd - 2451549.5;
+        var newMoons = daysSinceNew / 29.5306;
+        var newMoonsFract = newMoons - parseInt(newMoons);
+        var phase = newMoonsFract * 29.5306;
+     // Log.info(phase);
 
-        if (phase >= 28.5) {        // 0 and 8 are the same so turn 8 into 0
-            phase = 0
+        if (phase >= 29.5) {
+            phase = 0;
         }
 
-        // Choose correct moon phase image
-        var moonImage = ''
+        var moonImage = '';
 
         switch(true){
-            case  phase < 1.5:
-                moonImage = 'modules/phases/img/new-moon.png'
-                break
+            case phase < 0.5:
+                 moonImage = 'modules/phases/pix/wanecres2.png';
+                 moonText = this.translate("Waning_Crescent");
+                 break;
+            case phase < 1:
+                 moonImage = 'modules/phases/pix/wanecres1.png';
+                 moonText = this.translate("Waning_Crescent");
+                 break;
+            case phase < 1.5:
+                 moonImage = 'modules/phases/pix/newmoon.png'; // new moon
+                 moonText = this.translate("New_Moon");
+                 break;
+            case phase < 2:
+                 moonImage = 'modules/phases/pix/waxcres1.png';
+                 moonText = this.translate("Waxing_Crescent");
+                 break;
+            case phase < 2.5:
+                 moonImage = 'modules/phases/pix/waxcres5.png';
+                 moonText = this.translate("Waxing_Crescent");
+                 break;
+            case phase < 3:
+                 moonImage = 'modules/phases/pix/waxcres6.png';
+                 moonText = this.translate("Waxing_Crescent");
+                 break;
+            case phase < 3.5:
+                 moonImage = 'modules/phases/pix/waxcres11.png';
+                 moonText = this.translate("Waxing_Crescent");
+                 break;
+            case phase < 4:
+                 moonImage = 'modules/phases/pix/waxcres17.png';
+                 moonText = this.translate("Waxing_Crescent");
+                 break;
+            case phase < 4.5:
+                 moonImage = 'modules/phases/pix/waxcres23.png';
+                 moonText = this.translate("Waxing_Crescent");
+                 break;
+            case phase < 5:
+                 moonImage = 'modules/phases/pix/waxcres24.png';
+                 moonText = this.translate("Waxing_Crescent");
+                 break;
+            case phase < 5.5:
+                 moonImage = 'modules/phases/pix/waxcres26.png';
+                 moonText = this.translate("Waxing_Crescent");
+                 break;
             case phase < 6:
-                moonImage = 'modules/phases/img/waxing-crescent.png'
-                break
+                 moonImage = 'modules/phases/pix/waxcres32.png'; // waxing crescent
+                 moonText = this.translate("Waxing_Crescent");
+                 break;
+            case phase < 6.5:
+                 moonImage = 'modules/phases/pix/waxcres33.png';
+                 moonText = this.translate("Waxing_Crescent");
+                 break;
+            case phase < 7:
+                 moonImage = 'modules/phases/pix/waxcres35.png';
+                 moonText = this.translate("Waxing_Crescent");
+                 break;
+            case phase < 7.5:
+                 moonImage = 'modules/phases/pix/waxcres41.png';
+                 moonText = this.translate("Waxing_Crescent");
+                 break;
+            case phase < 8:
+                 moonImage = 'modules/phases/pix/waxcres42.png';
+                 moonText = this.translate("Waxing_Crescent");
+                 break;
+            case phase < 8.5:
+                 moonImage = 'modules/phases/pix/waxcres46.png';
+                 moonText = this.translate("Waxing_Crescent");
+                 break;
             case phase < 9:
-                moonImage = 'modules/phases/img/first-quarter.png'
-                break
+                 moonImage = 'modules/phases/pix/waxcres50.png'; // first quarter
+                 moonText = this.translate("First_Quarter");
+                 break;
+            case phase < 9.5:
+                 moonImage = 'modules/phases/pix/waxgib52.png';
+                 moonText = this.translate("Waxing_Gibbous");
+                 break;
+            case phase < 10:
+                 moonImage = 'modules/phases/pix/waxgib56.png';
+                 moonText = this.translate("Waxing_Gibbous");
+                 break;
+            case phase < 10.5:
+                 moonImage = 'modules/phases/pix/waxgib62.png';
+                 moonText = this.translate("Waxing_Gibbous");
+                 break;
+            case phase < 11:
+                 moonImage = 'modules/phases/pix/waxgib69.png';
+                 moonText = this.translate("Waxing_Gibbous");
+                 break;
+            case phase < 11.5:
+                 moonImage = 'modules/phases/pix/waxgib77.png';
+                 moonText = this.translate("Waxing_Gibbous");
+                 break;
+            case phase < 12:
+                 moonImage = 'modules/phases/pix/waxgib82.png';
+                 moonText = this.translate("Waxing_Gibbous");
+                 break;
+            case phase < 12.5:
+                 moonImage = 'modules/phases/pix/waxgib86.png';
+                 moonText = this.translate("Waxing_Gibbous");
+                 break;
+            case phase < 13:
+                 moonImage = 'modules/phases/pix/waxgib87.png';
+                 moonText = this.translate("Waxing_Gibbous");
+                 break;
+            case phase < 13.5:
+                 moonImage = 'modules/phases/pix/waxgib90.png';
+                 moonText = this.translate("Waxing_Gibbous");
+                 break;
             case phase < 14:
-                moonImage = 'modules/phases/img/waxing-gibbous.png'
-                break
+                 moonImage = 'modules/phases/pix/waxgib93.png'; // waxing gibbous
+                 moonText = this.translate("Waxing_Gibbous");
+                 break;
+            case phase < 14.5:
+                 moonImage = 'modules/phases/pix/waxgib96.png';
+                 moonText = this.translate("Waxing_Gibbous");
+                 break;
+            case phase < 15:
+                 moonImage = 'modules/phases/pix/waxgib98.png';
+                 moonText = this.translate("Waxing_Gibbous");
+                 break;
+            case phase < 15.5:
+                 moonImage = 'modules/phases/pix/waxgib99.png';
+                 moonText = this.translate("Waxing_Gibbous");
+                 break;
             case phase < 16:
-                moonImage = 'modules/phases/img/full-moon.png'
-                break
+                 moonImage = 'modules/phases/pix/fullmoon.png'; // full moon
+                 moonText = this.translate("Full_Moon");
+                 break;
+            case phase < 16.5:
+                 moonImage = 'modules/phases/pix/wanegib98.png';
+                 moonText = this.translate("Waning_Gibbous");
+                 break;
+            case phase < 17:
+                 moonImage = 'modules/phases/pix/wanegib96.png';
+                 moonText = this.translate("Waning_Gibbous");
+                 break;
+            case phase < 17.5:
+                 moonImage = 'modules/phases/pix/wanegib93.png';
+                 moonText = this.translate("Waning_Gibbous");
+                 break;
+            case phase < 18:
+                 moonImage = 'modules/phases/pix/wanegib92.png';
+                 moonText = this.translate("Waning_Gibbous");
+                 break;
+            case phase < 18.5:
+                 moonImage = 'modules/phases/pix/wanegib89.png';
+                 moonText = this.translate("Waning_Gibbous");
+                 break;
+            case phase < 19:
+                 moonImage = 'modules/phases/pix/wanegib86.png';
+                 moonText = this.translate("Waning_Gibbous");
+                 break;
+            case phase < 19.5:
+                 moonImage = 'modules/phases/pix/wanegib85.png';
+                 moonText = this.translate("Waning_Gibbous");
+                 break;
+            case phase < 20:
+                 moonImage = 'modules/phases/pix/wanegib81.png';
+                 moonText = this.translate("Waning_Gibbous");
+                 break;
+            case phase < 20.5:
+                 moonImage = 'modules/phases/pix/wanegib77.png';
+                 moonText = this.translate("Waning_Gibbous");
+                 break;
             case phase < 21:
-                moonImage = 'modules/phases/img/waning-gibbous.png'
-                break
+                 moonImage = 'modules/phases/pix/waegib75.png'; // waning gibbous
+                 moonText = this.translate("Waning_Gibbous");
+                 break;
+            case phase < 21.5:
+                 moonImage = 'modules/phases/pix/wanegib71.png';
+                 moonText = this.translate("Waning_Gibbous");
+                 break;
+            case phase < 22:
+                 moonImage = 'modules/phases/pix/wanegib67.png';
+                 moonText = this.translate("Waning_Gibbous");
+                 break;
+            case phase < 22.5:
+                 moonImage = 'modules/phases/pix/wanegib60.png';
+                 moonText = this.translate("Waning_Gibbous");
+                 break;
+            case phase < 23:
+                 moonImage = 'modules/phases/pix/wanegib56.png';
+                 moonText = this.translate("Waning_Gibbous");
+                 break;
+            case phase < 23.5:
+                 moonImage = 'modules/phases/pix/wanegib54.png';
+                 moonText = this.translate("Waning_Gibbous");
+                 break;
             case phase < 24:
-                moonImage = 'modules/phases/img/last-quarter.png'
-                break
+                 moonImage = 'modules/phases/pix/wanecres49.png'; // last quarter
+                 moonText = this.translate("Third_Quarter");
+                 break;
+            case phase < 24.5:
+                 moonImage = 'modules/phases/pix/wanecres45.png';
+                 moonText = this.translate("Waning_Crescent");
+                 break;
+            case phase < 25:
+                 moonImage = 'modules/phases/pix/wanecres38.png';
+                 moonText = this.translate("Waning_Crescent");
+                 break;
+            case phase < 25.5:
+                 moonImage = 'modules/phases/pix/wanecres28.png';
+                 moonText = this.translate("Waning_Crescent");
+                 break;
+            case phase < 26:
+                 moonImage = 'modules/phases/pix/wanecres25.png';
+                 moonText = this.translate("Waning_Crescent");
+                 break;
+            case phase < 26.5:
+                 moonImage = 'modules/phases/pix/wanecres19.png';
+                 moonText = this.translate("Waning_Crescent");
+                 break;
+            case phase < 27:
+                 moonImage = 'modules/phases/pix/wanecres17.png';
+                 moonText = this.translate("Waning_Crescent");
+                 break;
+            case phase < 27.5:
+                 moonImage = 'modules/phases/pix/wanecres15.png';
+                 moonText = this.translate("Waning_Crescent");
+                 break;
+            case phase < 28:
+                 moonImage = 'modules/phases/pix/wanecres12.png';
+                 moonText = this.translate("Waning_Crescent");
+                 break;
             case phase < 28.5:
-                moonImage = 'modules/phases/img/waning-crescent.png'
-                break
+                 moonImage = 'modules/phases/pix/wanecres10.png'; // waning crescent
+                 moonText = this.translate("Waning_Crescent");
+                 break;
+            case phase < 29:
+                 moonImage = 'modules/phases/pix/wanecres8.png';
+                 moonText = this.translate("Waning_Crescent");
+                 break;
+            case phase < 29.5:
+                 moonImage = 'modules/phases/pix/wanecres6.png';
+                 moonText = this.translate("Waning_Crescent");
+                 break;
         }
 
         // Create and return the necessary HTML
-        var wrapper = document.createElement("div")
-            wrapper.style.width = this.config.width + "px"
-            wrapper.style.height = this.config.height + "px"
+        var wrapper = document.createElement("div");
+        wrapper.style.height = "calc(" + this.config.height + "px + 5px";
         
-        var img = document.createElement("img")
-            img.height = this.config.height
-            img.widht = this.config.width
-            img.src = moonImage
+        var img = document.createElement("img");
+            img.style.height = this.config.height + "px";
+            img.style.widht = this.config.width + "px";
+            img.style.float = "right";
+            img.src = moonImage;
         
-        wrapper.appendChild(img)
+        wrapper.appendChild(img);
 
-        return wrapper
-    }
+        var txt = document.createElement("span");
+            txt.className = "medium bright";
+            txt.style.float = "left";
+            txt.innerHTML = "<header>Fazele lunii sinodice</header>" + moonText;
+        
+        wrapper.appendChild(txt);
+
+        return wrapper;
+     }
 });
