@@ -23,5 +23,5 @@ modules: [
 ## Config Options
 | **Option** | **Default** | **Description** |
 | --- | --- | --- |
-| `height` | 40 | The height of the image. |
-| `width` | 40 | The width of the image. |
+| `height` | 70 | The height of the image. |
+| `width` | 70 | The width of the image. |
