@@ -5,18 +5,19 @@
 Module.register("phases",{
     // Default module config.
     defaults: {
-        width: "70",
-        height: "70"
+          animationSpeed: 1000,
+          width: "70",
+          height: "70"
     },
     
     start: function() {
-	     Log.info('Starting module: ' + this.name);
+          Log.info('Starting module: ' + this.name);
           var self = this;
           setInterval(function(){
-            self.updateDom();
+            self.updateDom(this.animationSpeed);
         }, 60 * 1000);
 
-	},
+     },
 
      getScripts: function () {
           return [];
