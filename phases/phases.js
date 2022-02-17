@@ -18,6 +18,14 @@ Module.register("phases",{
 
 	},
 
+     getScripts: function () {
+          return [];
+     },
+
+     getStyles: function () {
+          return ["phases.css"];
+     },
+
      getTranslations: function () {
           return {
              en: "en.json",
