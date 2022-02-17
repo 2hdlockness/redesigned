@@ -13,10 +13,9 @@ Module.register("phases",{
     start: function() {
           Log.info('Starting module: ' + this.name);
           var self = this;
-          setInterval(function(){
-            self.updateDom(self.animationSpeed);
-        }, 60 * 1000);
-
+          setInterval(function () {
+               self.updateDom(self.config.animationSpeed);
+          }, this.config.updateInterval);
      },
 
      getScripts: function () {
