@@ -14,7 +14,7 @@ Module.register("phases",{
           var self = this;
           setInterval(function(){
             self.updateDom();
-        }, 60 * 60 * 1000);
+        }, 60 * 1000);
 
 	},
 
@@ -57,7 +57,7 @@ Module.register("phases",{
         var newMoons = daysSinceNew / 29.5306;
         var newMoonsFract = newMoons - parseInt(newMoons);
         var phase = newMoonsFract * 29.5306;
-     // Log.info(phase);
+      Log.info(phase);
 
         if (phase >= 29.5) {
             phase = 0;
