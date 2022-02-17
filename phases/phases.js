@@ -5,18 +5,19 @@
 Module.register("phases",{
     // Default module config.
     defaults: {
+          updateInterval: 60 * 1000,
           animationSpeed: 1000,
           width: "70",
           height: "70"
     },
     
     start: function() {
-          Log.info('Starting module: ' + this.name);
+	     Log.info('Starting module: ' + this.name);
           var self = this;
           setInterval(function () {
                self.updateDom(self.config.animationSpeed);
           }, this.config.updateInterval);
-     },
+	},
 
      getScripts: function () {
           return [];
@@ -57,7 +58,7 @@ Module.register("phases",{
         var newMoons = daysSinceNew / 29.5306;
         var newMoonsFract = newMoons - parseInt(newMoons);
         var phase = newMoonsFract * 29.5306;
-      Log.info(phase);
+     // Log.info(phase);
 
         if (phase >= 29.5) {
             phase = 0;
