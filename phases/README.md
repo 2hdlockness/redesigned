@@ -25,27 +25,27 @@ Now add the module to the modules array in the `config/config.js` file:
 
         compliments: {
                 new_moon : [
-                        "<i class=\"pix wi wi-moon-new\"></i><span class=\"txt\"> Este lună nouă</span>",
+                        "<i class=\"pix wi wi-moon-new\"></i><span class=\"txt\"> New Moon</span>",
                 ],
                 waxing_crescent : [
-                        "<i class=\"pix wi-moon-waxing-crescent-4\"></i> <span class=\"txt\">Semilună în creștere</span>",
+                        "<i class=\"pix wi-moon-waxing-crescent-4\"></i> <span class=\"txt\"> Waxing Crescent</span>",
                 ],
                 first_quarter : [
-                        "<i class=\"pix wi-moon-first-quarter\"></i> <span class=\"txt\">Primul pătrar</span>",
+                        "<i class=\"pix wi-moon-first-quarter\"></i> <span class=\"txt\"> Quarter</span>",
                 ],
                 waxing_gibbous : [
-                        "<i class=\"pix wi-moon-waxing-gibbous-4\"></i> <span class=\"txt\">Primul pătrar în creștere</span>",
+                        "<i class=\"pix wi-moon-waxing-gibbous-4\"></i> <span class=\"txt\"> Gibbous</span>",
                 ],
                 full_moon : [
-                        "<i class=\"pix wi wi-moon-full\"></i> <span class=\"txt\">Este lună plină</span>",
+                        "<i class=\"pix wi wi-moon-full\"></i> <span class=\"txt\"> Full Monn</span>",
                 ],
                 waning_gibbous : [
-                        "<i class=\"pix wi-moon-waning-gibbous-4\"></i> <span class=\"txt\">Ultimul pătrar în scădere</span>",
+                        "<i class=\"pix wi-moon-waning-gibbous-4\"></i> <span class=\"txt\"> Waning Gibbous</span>",
                 ],
                 third_quarter : [
-                        "<i class=\"pix wi-moon-third-quarter\"></i> <span class=\"txt\">Ultimul pătrar</span>",
+                        "<i class=\"pix wi-moon-third-quarter\"></i> <span class=\"txt\"> Third Quarter</span>",
                 ],
                 waning_crescent : [
-                        "<i class=\"pix wi-moon-waning-crescent-4\"></i> <span class=\"txt\">Semilună în scădere</span>",
+                        "<i class=\"pix wi-moon-waning-crescent-4\"></i> <span class=\"txt\"> Waning Crescent</span>",
                 ],
         }
