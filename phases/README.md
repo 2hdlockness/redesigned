@@ -23,6 +23,8 @@ Now add the module to the modules array in the `config/config.js` file:
 
 ## Compliments
 
+You need to use my compliments_plus to work with phases compliments https://github.com/hangorazvan/compliments_plus
+
         compliments: {
                 new_moon : [
                         "<i class=\"pix wi wi-moon-new\"></i><span class=\"txt\"> New Moon</span>",
