@@ -13,3 +13,4 @@ Some 3rd party modified modules:
 <br>snow
 <br>simpletext
 <br>moon phases
+<br>solar system
