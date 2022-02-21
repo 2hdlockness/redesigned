@@ -13,10 +13,6 @@ Some original modified modules:
 Some 3rd party modified modules:
 <br>multi monthly calendar 
 <br>random quotes 
-<br>jsontable
-<br>gameoflife
-<br>traffic
-<br>snow
-<br>simpletext
-<br>moon phases
-<br>solar system
+<br>jsontable 
+
+Redesigned by Răzvan Cristea https://github.com/hangorazvan Creative Commons BY-NC-SA 4.0, Romania.
