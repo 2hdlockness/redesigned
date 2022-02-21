@@ -1,4 +1,8 @@
 # JsonTable for MagicMirror&sup2;
+
+[![Platform](https://img.shields.io/badge/platform-MagicMirror2-informational)](https://github.com/hangorazvan/MagicMirror2)
+[![CC-0 license](https://img.shields.io/badge/License-CC--4.0-blue.svg)](https://creativecommons.org/licenses/by-nd/4.0)
+
 A module which creates a table filled with a list gathered from a json request.
 
 All the variables of the objects in the array are represented by a table column.
