@@ -1,4 +1,4 @@
-# Module: MMM-Snow
+# Snow
 
 [![Platform](https://img.shields.io/badge/platform-MagicMirror2-informational)](https://github.com/hangorazvan/MagicMirror2)
 [![CC-0 license](https://img.shields.io/badge/License-CC--4.0-blue.svg)](https://creativecommons.org/licenses/by-nd/4.0)
@@ -39,7 +39,7 @@ The following property can be configured:
 Certainly, there are many opportunities for new themes. To extend this module with new themes takes three simple development steps.
 
 ### Add image files
-Add your "flake" images to folder `./images` in `MMM-Snow`directory. The image has to be a PNG with transparent background color. Make size of the file similar to existing files (50x50). The file names have to have a prefix followed by a number, e.g. `foo1.png`, `foo2.png`, `foo3.png`.
+Add your "flake" images to folder `./images` in `snow`directory. The image has to be a PNG with transparent background color. Make size of the file similar to existing files (50x50). The file names have to have a prefix followed by a number, e.g. `foo1.png`, `foo2.png`, `foo3.png`.
 
 ### Reference images in CSS classes
 Create new CSS classes in `MMM-Snow.css`, which reference your images. Class name and file name n´have to be identical. 
@@ -60,7 +60,7 @@ Extend the `themes` map in the file `snow.js`. Just add another entry
 The named index `bar` is the externally visible theme name, which has to be used in `config.js`. Setting `flakePrefix` tells how the image files and CSS classes are called; in our example it should be `foo`. `imagesCount` defines how many image files / css classes are there. If you have three images, put `3` which makes the module using `foo1`, `foo2`, and `foo3` respectively. The boolean setting `downwards` defines the direction of flakes' movements; `true` means downwards and `true` means upwards. Setting `sizeFactor` makes the flake images larger or smaller; values between 0 and 1 makes the flake smaller, while values larger  than 1 enlarges them.
 
 ### Configure new theme
-To use the new theme, change the `theme` parameter for the `MMM-Snow` module in the `config/config.js` file:
+To use the new theme, change the `theme` parameter for the `snow` module in the `config/config.js` file:
 ````javascript
 modules: [
 	{
