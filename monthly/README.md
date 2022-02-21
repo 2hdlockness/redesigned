@@ -1,5 +1,8 @@
 # Calendar with multiple months (user configurable)
 
+[![Platform](https://img.shields.io/badge/platform-MagicMirror2-informational)](https://github.com/hangorazvan/MagicMirror2)
+[![CC-0 license](https://img.shields.io/badge/License-CC--4.0-blue.svg)](https://creativecommons.org/licenses/by-nd/4.0)
+
 It's purpose is to enable a mini-calendar with as many months as the user wants, assuming screen space is available.
 
 To use this module, add it to the modules array in the config/config.js file:
