@@ -1,5 +1,8 @@
 # Random quotes for MagicMirror&sup2;
 
+[![Platform](https://img.shields.io/badge/platform-MagicMirror2-informational)](https://github.com/hangorazvan/MagicMirror2)
+[![CC-0 license](https://img.shields.io/badge/License-CC--4.0-blue.svg)](https://creativecommons.org/licenses/by-nd/4.0)
+
 The `quotes` module returns a random quote based on the category set. See the section on `Updating Quotes` below.
 
 ## Using the module
