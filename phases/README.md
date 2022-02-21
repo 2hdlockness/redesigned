@@ -1,4 +1,8 @@
 # Magic Mirror Module: Moon phase
+
+[![Platform](https://img.shields.io/badge/platform-MagicMirror2-informational)](https://github.com/hangorazvan/MagicMirror2)
+[![CC-0 license](https://img.shields.io/badge/License-CC--4.0-blue.svg)](https://creativecommons.org/licenses/by-nd/4.0)
+
 This [MagicMirror2] module allows you to fetch an image of the moon in its current phase
 
 Configure the module in your `config.js` file.
@@ -22,8 +26,6 @@ Now add the module to the modules array in the `config/config.js` file:
         ]
 
 ## Compliments
-
-You need to use my compliments_plus to work with phases compliments https://github.com/hangorazvan/compliments_plus
 
         compliments: {
                 new_moon : [
